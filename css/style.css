@@ -1,0 +1,37 @@
+.pt-page-1 {
+	background: #0ac2d2;
+}
+
+.pt-page-2 {
+	background: #7bb7fa;
+}
+
+.pt-page-3 {
+	background: #60d7a9;
+}
+
+.pt-page-4 {
+	background: #fdc162;
+}
+
+.pt-page-5 {
+	background: #fd6a62;
+}
+
+.pt-page-6 {
+	background: #f68dbb;
+}
+
+.btnList{
+	position: absolute;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	z-index: 100;
+}
+.btnList .btn{
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	color: white;
+}

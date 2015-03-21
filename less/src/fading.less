@@ -1,0 +1,60 @@
+/*fade*/
+@import 'fadingIn/fadeIn';
+@import 'fadingOut/fadeOut';
+/*bounceUp*/
+@import 'bouncingIn/bounceInUp';
+@import 'bouncingOut/bounceOutDown';
+/*bounceRight*/
+@import 'bouncingIn/bounceInRight';
+@import 'bouncingOut/bounceOutRight';
+/*bounceDown*/
+@import 'bouncingIn/bounceInDown';
+@import 'bouncingOut/bounceOutUp';
+/*bounceLeft*/
+@import 'bouncingIn/bounceInLeft';
+@import 'bouncingOut/bounceOutLeft';
+
+.fade{
+	&.next{
+		animation-name: fadeIn;
+	}
+	&.pre{
+		animation-name: fadeOut;
+	}
+}
+
+.bounceUp{
+	&.next{
+		animation-name: bounceInUp;
+	}
+	&.pre{
+		animation-name: bounceOutDown;
+	}
+}
+
+.bounceRight{
+	&.next{
+		animation-name: bounceInRight;
+	}
+	&.pre{
+		animation-name: bounceOutRight;
+	}
+}
+
+.bounceDown{
+	&.next{
+		animation-name: bounceInDown;
+	}
+	&.pre{
+		animation-name: bounceOutUp;
+	}
+}
+
+.bounceLeft{
+	&.next{
+		animation-name: bounceInLeft;
+	}
+	&.pre{
+		animation-name: bounceOutLeft;
+	}
+}

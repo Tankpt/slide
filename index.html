@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Scroll</title>
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="less/build/animate.css" /> 
+		<!--<script src="js/modernizr.custom.js"></script>-->
+	</head>
+	<body>	
+		
+		<div id="pt-main" class="pt-pageList">
+			<div class="pt-page pt-page-1 pt-page-current" data-animate="bounce">
+				<h1><span>A collection of</span><strong>Page1</strong> Transitions</h1>
+			</div>
+			<div class="pt-page pt-page-2" data-animate="bounceUp">
+				<h1><span>A collection of</span><strong>Page2</strong> Transitions</h1>
+			</div>
+			<div class="pt-page pt-page-3" data-animate="bounceRight">
+				<h1><span>A collection of</span><strong>Page3</strong> Transitions</h1>
+			</div>
+			<div class="pt-page pt-page-4" data-animate="bounceDown">
+				<h1><span>A collection of</span><strong>Page4</strong> Transitions</h1>
+			</div>
+			<div class="pt-page pt-page-5" data-animate="bounceLeft">
+				<h1><span>A collection of</span><strong>Page5</strong> Transitions</h1>
+			</div>
+			<div class="pt-page pt-page-6" data-animate="rotateInDownLeft">
+				<h1><span>A collection of</span><strong>Page6</strong> Transitions</h1>
+			</div>
+		</div>
+		<div class="btnList">
+			<a href="javascript:void 0" class="preBtn btn">pre</a>
+			<a href="javascript:void 0" class="nextBtn btn">next</a>
+		</div>
+		<script src="js/zepto.js"></script>
+		<script src="js/scroll.js"></script>
+		<script type="text/javascript">
+
+		var slid = new SlidePage({
+			container : "#pt-main"
+		});
+
+		$(".preBtn").on('click',function(){
+			slid.prePage();
+		})
+
+		$(".nextBtn").on('click',function(){
+			slid.nextPage();
+		})
+		</script>
+	</body>
+</html>
