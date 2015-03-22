@@ -1,3 +1,4 @@
+/*bounce*/
 @import 'bouncingIn/bounceIn';
 @import 'bouncingOut/bounceOut';
 /*bounceUp*/
@@ -14,46 +15,36 @@
 @import 'bouncingOut/bounceOutLeft';
 
 .bounce{
-	&.next{
-		animation-name: bounceIn;
-	}
-	&.pre{
+	animation-name: bounceIn;
+	&.out{
 		animation-name: bounceOut;
 	}
 }
 
 .bounceUp{
-	&.next{
-		animation-name: bounceInUp;
-	}
-	&.pre{
+	animation-name: bounceInUp;
+	&.out{
 		animation-name: bounceOutDown;
 	}
 }
 
 .bounceRight{
-	&.next{
-		animation-name: bounceInRight;
-	}
-	&.pre{
+	animation-name: bounceInRight;
+	&.out{
 		animation-name: bounceOutRight;
 	}
 }
 
 .bounceDown{
-	&.next{
-		animation-name: bounceInDown;
-	}
-	&.pre{
+	animation-name: bounceInDown;
+	&.out{
 		animation-name: bounceOutUp;
 	}
 }
 
 .bounceLeft{
-	&.next{
-		animation-name: bounceInLeft;
-	}
-	&.pre{
+	animation-name: bounceInLeft;
+	&.out{
 		animation-name: bounceOutLeft;
 	}
 }

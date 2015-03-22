@@ -1,0 +1,49 @@
+/*zoom*/
+@import 'zoomingIn/zoomIn';
+@import 'zoomingOut/zoomOut';
+.zoom{
+	animation-name: zoomIn;
+	&.out{
+		animation-name: zoomOut;
+	}
+}
+
+/*zoomUp*/
+@import 'zoomingIn/zoomInUp';
+@import 'zoomingOut/zoomOutDown';
+.zoomUp{
+	animation-name: zoomInUp;
+	&.out{
+		animation-name: zoomOutDown;
+	}
+}
+
+/*zoomRight*/
+@import 'zoomingIn/zoomInRight';
+@import 'zoomingOut/zoomOutRight';
+.zoomRight{
+	animation-name: zoomInRight;
+	&.out{
+		animation-name: zoomOutRight;
+	}
+}
+
+/*zoomDown*/
+@import 'zoomingIn/zoomInDown';
+@import 'zoomingOut/zoomOutUp';
+.zoomDown{
+	animation-name: zoomInDown;
+	&.out{
+		animation-name: zoomOutUp;
+	}
+}
+
+/*zoomLeft*/
+@import 'zoomingIn/zoomInLeft';
+@import 'zoomingOut/zoomOutLeft';
+.zoomLeft{
+	animation-name: zoomInLeft;
+	&.out{
+		animation-name: zoomOutLeft;
+	}
+}

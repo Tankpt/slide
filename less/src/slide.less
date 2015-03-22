@@ -1,0 +1,39 @@
+/*slideUp*/
+@import 'slidingIn/slideInUp';
+@import 'slidingOut/slideOutDown';
+.slideUp{
+	animation-name: slideInUp;
+	&.out{
+		animation-name: slideOutDown;
+	}
+}
+
+/*slideRight*/
+@import 'slidingIn/slideInRight';
+@import 'slidingOut/slideOutRight';
+.slideRight{
+	animation-name: slideInRight;
+	&.out{
+		animation-name: slideOutRight;
+	}
+}
+
+/*slideDown*/
+@import 'slidingIn/slideInDown';
+@import 'slidingOut/slideOutUp';
+.slideDown{
+	animation-name: slideInDown;
+	&.out{
+		animation-name: slideOutUp;
+	}
+}
+
+/*slideLeft*/
+@import 'slidingIn/slideInLeft';
+@import 'slidingOut/slideOutLeft';
+.slideLeft{
+	animation-name: slideInLeft;
+	&.out{
+		animation-name: slideOutLeft;
+	}
+}

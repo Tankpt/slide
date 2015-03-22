@@ -68,9 +68,9 @@
 
       this.isAnimating = true;
       
-      $inNode.addClass(inClass+' next pt-page-current animated').one(transitionEvent,function(){
+      $inNode.addClass(inClass+' pt-page-current animated').one(transitionEvent,function(){
         $outNode.removeClass('pt-page-current');
-        $inNode.removeClass(inClass+' next animated');
+        $inNode.removeClass(inClass+' animated');
         self.isAnimating = false;
       })
     }
@@ -97,8 +97,8 @@
         $inNode.removeClass(inClass+' animated');
         self.isAnimating = false;
       })*/
-      $outNode.addClass(outClass+' pre animated').one(transitionEvent,function(){
-        $outNode.removeClass(outClass+' pre animated pt-page-current');
+      $outNode.addClass(outClass+' out animated').one(transitionEvent,function(){
+        $outNode.removeClass(outClass+' out animated pt-page-current');
         self.isAnimating = false;
       })
     }

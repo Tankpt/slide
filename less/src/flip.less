@@ -1,0 +1,21 @@
+/*flipX*/
+@import 'flippers/flipInX';
+@import 'flippers/flipOutX';
+.flipX{
+	backface-visibility: visible !important;
+  	animation-name: flipInX;
+	&.out{
+		animation-name: flipOutX;
+	}
+}
+
+/*flipY*/
+@import 'flippers/flipInY';
+@import 'flippers/flipOutY';
+.flipY{
+	backface-visibility: visible !important;
+  	animation-name: flipInY;
+	&.out{
+		animation-name: flipOutY;
+	}
+}
