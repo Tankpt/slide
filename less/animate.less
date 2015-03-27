@@ -1,38 +1,54 @@
-@import 'src/bouncing';
-@import 'src/fading';
-@import 'src/flip';
-@import 'src/rotate';
-@import 'src/slide';
-@import 'src/zoom';
-
-
 @charset "UTF-8";
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
 
-Copyright (c) 2015 Daniel Eden
-*/
+.pt-pageList{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.animated {
+	 	animation-duration: 1s;
+	 	animation-fill-mode: both;
+	  	&.infinite {
+	  		animation-iteration-count: infinite;
+		}
+		&.hinge {
+	  		animation-duration: 2s;
+		}
+		&.bounceIn,&.bounceOut{
+			animation-duration: .75s;
+		}
+		&.flipOutX,&.flipOutY{
+	  		animation-duration: .75s;
+		}
+	}
+	@import 'src/bouncing';
+	@import 'src/fading';
+	@import 'src/flip';
+	@import 'src/rotate';
+	@import 'src/slide';
+	@import 'src/zoom';
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+	@import 'src/delay';
+}
+.pt-page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	overflow: hidden;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+	transform-style: preserve-3d;	
+	.removeable{
+		display: none;
+	}
+	background-size: cover;
+	background-position: 50% 100%;
 }
 
-.animated.infinite {
-  animation-iteration-count: infinite;
-}
-
-.animated.hinge {
-  animation-duration: 2s;
-}
-
-.animated.bounceIn,
-.animated.bounceOut {
-  animation-duration: .75s;
-}
-
-.animated.flipOutX,
-.animated.flipOutY {
-  animation-duration: .75s;
+.pt-page-current{
+	visibility: visible;
 }
