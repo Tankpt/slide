@@ -2,27 +2,15 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg : grunt.file.readJSON("package.json"),
         less: {
-            dev: {
-                options: {
-                    paths: ["less"],
-                    compress: false,
-                    sourceMap: false,
-                    // 指定 source map 文件名称
-                },
-                files: [{
-                    src:"less/animate.less",
-                    dest:"less/build/animate.css"
-                }]
+            options: {
+                paths: ["less"],
+                compress: false,
+                sourceMap: false
             },
-            pro :{
-                options: {
-                    paths: ["<%= pkg.dir.webapp %>/css"],
-                    compress: true,
-                    sourceMap: false
-                },
+            main:{
                 files: [{
-                    src:"<%= pkg.dir.webapp %>/less/style.less",
-                    dest:"build/css/style.css"
+                    src:"src/less/animate.less",
+                    dest:"build/css/animate.css"
                 }]
             }
         },
@@ -31,27 +19,53 @@ module.exports = function (grunt) {
                 browsers: ['last 2 versions', 'bb 10']
             },
             no_dest: {
-                src: 'less/build/animate.css' // output file
+                src: 'build/css/animate.css' // output file
             }
         },
         cssmin: {
-            dev :{
+            main :{
                 files: [{
                   expand: true,
                   cwd: 'build/css/',
-                  src: ['*.css', '!*.min.css'],
-                  dest:"<%= pkg.dir.target %>/css/"
+                  src: ['*.css'],
+                  dest:"build/css/"
                 }]
             }
-        }
+        },
+        copy :{
+            main:{
+                files: [{
+                    expand: true,
+                    cwd: 'src/js/',
+                    src: ['**'],
+                    dest: 'build/js/'
+                }] 
+            }
+        },
+        uglify : {
+            options: {
+                report : 'gzip' 
+            },
+            pro :{
+                files: [{
+                    expand : true,
+                    cwd : 'build/js/',
+                    src : '**/**.js',
+                    dest : 'build/js/'
+                }]
+            }
+        },
     });
    
     /*deal with css*/
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     /*different task*/
-    grunt.registerTask('default', ['less:dev','autoprefixer']);
+    grunt.registerTask('default', ['less:main','autoprefixer','copy:main']);
+    grunt.registerTask('pro', ['less:main','autoprefixer','cssmin:main','copy:main','uglify:pro']);
     
 };

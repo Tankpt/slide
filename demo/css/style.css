@@ -1,5 +1,6 @@
 .pt-page-1 {
 	background: #0ac2d2;
+	color:#fff;
 }
 
 .pt-page-2 {
@@ -112,17 +113,4 @@
 
 .pt-page-30 {
 	background: #f68dbb;
-}
-.btnList{
-	position: absolute;
-	bottom: 0;
-	height: 40px;
-	width: 100%;
-	z-index: 100;
-}
-.btnList .btn{
-	width: 40px;
-	height: 40px;
-	background-color: red;
-	color: white;
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>Scroll</title>
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../build/css/animate.css" /> 
+	</head>
+	<body>	
+		
+		<div id="pt-main" class="pt-pageList">
+			<div class="pt-page lazyload">
+				<h1>1.bounce Transitions</h1>
+				<h1 class="animated bounceUp removeable delay2">2.bounceUp Transitions</h1>
+				<img data-src="http://gtms01.alicdn.com/tps/i1/TB1kqDAHpXXXXbfXFXXgERl0VXX-640-635.jpg_q60" style="width:200px;height:200px" class="animated bounceUp removeable delay4 lazyload" data-delay="1">
+			</div>
+			<div class="pt-page pt-page-2 lazyload" data-animate="bounceUp" data-bg="http://gtms01.alicdn.com/tps/i1/TB18O1xHXXXXXcnXVXXBRF20VXX-640-960.jpg">
+				<h1 class="animated bounceUp removeable delay2" data-delay="1">2.bounceUp Transitions</h1>
+				<h1 class="animated bounceUp removeable delay4" data-delay="3">2. delay 3</h1>
+			</div>
+			<div class="pt-page pt-page-3 lazyload" data-animate="bounceRight" data-bg="http://gtms04.alicdn.com/tps/i4/TB1h74wHXXXXXasapXXBRF20VXX-640-960.jpg">
+				<h1>3.bounceRight Transitions</h1>
+				<h1 class="animated bounceRight removeable delay1" data-delay="1">2.bounceUp Transitions</h1>
+				<h1 class="animated bounceDown removeable delay4" data-delay="3">2. delay 3</h1>
+			</div>
+			
+		</div>
+		<script src="../build/js/zepto.js"></script>
+		<script src="../build/js/scroll.js"></script>
+		<script type="text/javascript">
+
+		var slid = new SlidePage({
+				container : "#pt-main"
+			}),
+			mainBody = $("#pt-main");
+
+		mainBody.on('swipeDown',function(){
+			slid.prePage();
+		})
+
+		mainBody.on('swipeUp',function(){
+			slid.nextPage();
+		})
+		</script>
+	</body>
+</html>
