@@ -19,7 +19,7 @@
 		</div>
 		<div class="pt-page">
 		    <h1>/*页面切换完就有*/</h1>
-			<h1 class="animated bounceUp removeable delay2">/*切换完后延迟动画*/</h1>
+			<h1 class="bounceUp removeable delay2">/*切换完后延迟动画*/</h1>
 			<img data-src="" class="lazyload">/*每一页中的图片元素也支持惰性加载*/
 		</div>
 		...
@@ -33,7 +33,7 @@
 
 (4)　data-bg=""对于每一页设置背景图片还需要进行惰性加载的页面，可以将背景图的地址放在这里（暂不支持bg名字的重新配置），**同时元素需要再加一个类lazyload**
 
-(5)　对于每一个页面中的元素，可以自行进行定位样式的设置，如果需要对每一页中的元素进行动画配置，则只需要对该元素加上class为"animated removeable　bounceUp delay2"，除了延迟的类以外其他都是必须的且都不可配置
+(5)　对于每一个页面中的元素，可以自行进行定位样式的设置，如果需要对每一页中的元素进行动画配置，则只需要对该元素加上class为"removeable　bounceUp delay2"，除了延迟的类以外其他都是必须的且都不可配置
         
         bounceUp /*动画的名字，种类见附录*/
         delay2 /*动画延迟时间，可自行定义类加入，若没有则无延迟*/

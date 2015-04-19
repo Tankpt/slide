@@ -7,28 +7,133 @@
 		<meta content="telephone=no,email=no" name="format-detection">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
 		<title>Scroll</title>
-		<link rel="shortcut icon" href="../favicon.ico"> 
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
 		<link rel="stylesheet" type="text/css" href="../build/css/animate.css" /> 
+		<!--<script src="js/modernizr.custom.js"></script>-->
 	</head>
 	<body>	
 		
 		<div id="pt-main" class="pt-pageList">
-			<div class="pt-page lazyload">
-				<h1>1.bounce Transitions</h1>
-				<h1 class="animated bounceUp removeable delay2">2.bounceUp Transitions</h1>
-				<img data-src="http://gtms01.alicdn.com/tps/i1/TB1kqDAHpXXXXbfXFXXgERl0VXX-640-635.jpg_q60" style="width:200px;height:200px" class="animated bounceUp removeable delay4 lazyload" data-delay="1">
+			<div class="pt-page pt-page-1 lazyload" data-animate="bounce" data-bg="http://image.tianjimedia.com/uploadImages/2012/319/CY1D9HHVLGK1.jpg">
+				<h1>1.bounce动画+背景惰性加载</h1>
+				<h2 class="removeable delay2" data-animate="bounce">bounceUp此处延迟1s</h2>
 			</div>
-			<div class="pt-page pt-page-2 lazyload" data-animate="bounceUp" data-bg="http://gtms01.alicdn.com/tps/i1/TB18O1xHXXXXXcnXVXXBRF20VXX-640-960.jpg">
-				<h1 class="animated bounceUp removeable delay2" data-delay="1">2.bounceUp Transitions</h1>
-				<h1 class="animated bounceUp removeable delay4" data-delay="3">2. delay 3</h1>
+			<div class="pt-page pt-page-2 lazyload" data-animate="bounceUp" data-bg="http://mms.fzl3g.com/upload/20100411/20100411173236663.jpg">
+				<h1 class="removeable delay1" data-animate="bounceUp">2.bounceUp 动画延迟0.2s</h1>
+				<h2 class="removeable delay4" data-animate="bounceUp">延迟1s</h2>
 			</div>
-			<div class="pt-page pt-page-3 lazyload" data-animate="bounceRight" data-bg="http://gtms04.alicdn.com/tps/i4/TB1h74wHXXXXXasapXXBRF20VXX-640-960.jpg">
+			<div class="pt-page pt-page-3 lazyload" data-animate="bounceRight" data-bg="http://wenwen.soso.com/p/20111006/20111006103343-844131634.jpg">
 				<h1>3.bounceRight Transitions</h1>
-				<h1 class="animated bounceRight removeable delay1" data-delay="1">2.bounceUp Transitions</h1>
-				<h1 class="animated bounceDown removeable delay4" data-delay="3">2. delay 3</h1>
+				<h2 class="removeable delay3" data-animate="bounceRight">延迟1.2秒</h2>
 			</div>
-			
+			<div class="pt-page pt-page-4 lazyload" data-animate="bounceDown" data-bg="http://img4.duitang.com/uploads/item/201308/25/20130825062203_nvBZJ.thumb.600_0.jpeg">
+				<h1>4.bounceDown Transitions</h1>
+				<h2 class="removeable delay4" data-animate="bounceDown">2. delay2秒</h2>
+			</div>
+			<div class="pt-page pt-page-5 lazyload" data-animate="bounceLeft" data-bg="http://pic.tyread.com:8082/content_T1SyxTBCbC1RytvJIE_320x480.jpg">
+				<h1>5.bounceLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="bounceLeft">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-6 lazyload" data-animate="fade" data-bg="http://image.feeliu.com/Upload/20126/426735/fo2593/1206261615257904.jpg">
+				<h1>6.fade Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fade">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-7 lazyload" data-animate="fadeUp" data-bg="http://image.tianjimedia.com/uploadImages/2012/118/1479B0VSXCA0.jpg">
+				<h1>7.fadeUp Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeUp">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-8 lazyload" data-animate="fadeUpBig" data-bg="http://ww1.sinaimg.cn/large/40ba34d0jw1dw32xhrkypj.jpg">
+				<h1>8.fadeUpBig Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeUpBig">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-9 lazyload" data-animate="fadeRight" data-bg="http://id.topit.me/d/d6/61/1104039272e4d61d6dl.jpg">
+				<h1>9.fadeRight Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeRight">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-10 lazyload" data-animate="fadeRightBig" data-bg="http://photo.l99.com/bigger/02/MjAwOTA5MDUyMzQ4MDNfNTkuMTc0LjE2MS4xNjVfMzc0NzMx.jpg">
+				<h1>10.fadeRightBig Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeRightBig">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-11 lazyload" data-animate="fadeDown" data-bg="http://imgsrc.baidu.com/forum/w%3D580/sign=6f52df547bcb0a4685228b315b62f63e/64380cd7912397ddc2e5a5aa5982b2b7d1a287fb.jpg">
+				<h1>11.fadeDown Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeDown">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-12 lazyload" data-animate="fadeDownBig" data-bg="http://imgsrc.baidu.com/forum/w%3D580/sign=c5ede1515aafa40f3cc6ced59b64038c/87d6277f9e2f07089e257c63e924b899a901f2b5.jpg">
+				<h1>12.fadeDownBig Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeDownBig">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-13 lazyload" data-animate="fadeLeft" data-bg="http://files.vivo.com.cn/bbs_upfiles/data/attachment/forum/201305/13/210243764qsabjmsszjrab.png">
+				<h1>13.fadeLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeLeft">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-14 lazyload" data-animate="fadeLeftBig" data-bg="http://imgsrc.baidu.com/forum/w%3D580/sign=5d69f75d362ac65c6705667bcbf3b21d/fd2883cc7cd98d106607270c223fb80e7aec9035.jpg">
+				<h1>14.fadeLeftBig Transitions</h1>
+				<h2 class="removeable delay2" data-animate="fadeLeftBig">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-15 lazyload" data-animate="flipX" data-bg="http://img4.duitang.com/uploads/blog/201404/19/20140419193753_YY2Li.jpeg">
+				<h1>15.flipX Transitions</h1>
+				<h2 class="removeable delay2" data-animate="flipX">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-16 lazyload" data-animate="flipY" data-bg="http://img.blog.163.com/photo/kVhS6CWv3i18goXtHX_jqA==/3720254767184855249.jpg">
+				<h1>16.flipY Transitions</h1>
+				<h2 class="removeable delay2" data-animate="flipY">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-17 lazyload" data-animate="rotate" data-bg="http://img5.duitang.com/uploads/blog/201405/04/20140504013900_FkSzK.thumb.700_0.jpeg">
+				<h1>17.rotate Transitions</h1>
+				<h2 class="removeable delay2" data-animate="rotate">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-18 lazyload" data-animate="rotateDownLeft" data-bg="http://www.doershow.com/uploads/allimg/101228/21114Q949-33.jpg">
+				<h1>18.rotateDownLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="rotateDownLeft">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-19 lazyload" data-animate="rotateDownRight" data-bg="http://img5.pcpop.com/bizhi/big/10/060/555/10060555.jpg">
+				<h1>19.rotateDownRight Transitions</h1>
+				<h2 class="removeable delay2" data-animate="rotateDownRight">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-20 lazyload" data-animate="rotateUpLeft" data-bg="http://www.doershow.com/uploads/allimg/110521/232303JR-73.jpg">
+				<h1>20.rotateUpLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="rotateUpLeft">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-21 lazyload" data-animate="rotateUpRight" data-bg="http://img2.duitang.com/uploads/item/201301/12/20130112174743_VftGV.jpeg">
+				<h1>21.rotateUpRight Transitions</h1>
+				<h2 class="removeable delay2" data-animate="rotateUpRight">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-22 lazyload" data-animate="slideUp" data-bg="http://img.yingyonghui.com/snapshots/252/252444_0.png">
+				<h1>22.slideUp Transitions</h1>
+				<h2 class="removeable delay2" data-animate="slideUp">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-23 lazyload" data-animate="slideRight" data-bg="http://d.3987.com/lmyxtx_140608/002.jpg">
+				<h1>23.slideRight Transitions</h1>
+				<h2 class="removeable delay2" data-animate="slideRight">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-24 lazyload" data-animate="slideDown" data-bg="http://ie.topit.me/e/87/7f/1105127447bb87f87el.jpg">
+				<h1>24.slideDown Transitions</h1>
+				<h2 class="removeable delay2" data-animate="slideDown">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-25 lazyload" data-animate="slideLeft" data-bg="http://att3.citysbs.com/m320x/hangzhou/2013/10/05/14/320x480-144734_19431380955654728_09ba5c1ef7c241a45d6771497e6866cc.jpg">
+				<h1>25.slideLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="slideLeft">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-26 lazyload" data-animate="zoom" data-bg="http://imgsrc.baidu.com/forum/w%3D580/sign=15f3e6d111ce36d3a20483380af33a24/fe1b6e3d70cf3bc7d17bd7e7d500baa1cd112a50.jpg">
+				<h1>26.zoom Transitions</h1>
+				<h2 class="removeable delay2" data-animate="zoom">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-27 lazyload" data-animate="zoomUp" data-bg="http://imgsrc.baidu.com/forum/w%3D580%3Bcp%3Dtieba%2C10%2C443%3Bap%3D%B6%AF%C2%FE%CD%B7%CF%F1%B0%C9%2C104%2C454/sign=3df6b114b17eca80120539efa118f4ad/32fa828ba61ea8d372f86333960a304e251f582a.jpg">
+				<h1>27.zoomUp Transitions</h1>
+				<h2 class="removeable delay2" data-animate="zoomUp">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-28 lazyload" data-animate="zoomRight" data-bg="http://p.qq181.com/cms/1304/2013040609514784858.jpg">
+				<h1>28.zoomRight Transitions</h1>
+				<h2 class="removeable delay2" data-animate="zoomRight">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-29 lazyload" data-animate="zoomDown" data-bg="http://a.hiphotos.baidu.com/zhidao/pic/item/c995d143ad4bd11343073b7d5eafa40f4afb05b2.jpg">
+				<h1>29.zoomDown Transitions</h1>
+				<h2 class="removeable delay2" data-animate="zoomDown">延迟1s</h2>
+			</div>
+			<div class="pt-page pt-page-30 lazyload" data-animate="zoomLeft" data-bg="http://hiphotos.baidu.com/wisegame/pic/item/b2c8a786c9177f3e4633f1b171cf3bc79f3d5602.jpg">
+				<h1>30.zoomLeft Transitions</h1>
+				<h2 class="removeable delay2" data-animate="zoomLeft">延迟1s</h2>
+			</div>
 		</div>
 		<script src="../build/js/zepto.js"></script>
 		<script src="../build/js/scroll.js"></script>
@@ -37,13 +142,17 @@
 		var slid = new SlidePage({
 				container : "#pt-main"
 			}),
-			mainBody = $("#pt-main");
+			mainBody = $(".pt-page");
 
-		mainBody.on('swipeDown',function(){
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		mainBody.on('swipeDown',function(e){
+			e.preventDefault();
 			slid.prePage();
 		})
 
-		mainBody.on('swipeUp',function(){
+		mainBody.on('swipeUp',function(e){
+			e.preventDefault();
 			slid.nextPage();
 		})
 		</script>
