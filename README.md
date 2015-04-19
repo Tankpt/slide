@@ -87,3 +87,6 @@
 (6) zoom类
 
     zoom、zoomUp、zoomRight、zoomDown、zoomLeft
+
+
+注：图片来源于百度＆＆谷歌

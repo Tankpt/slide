@@ -23,6 +23,7 @@
         }
       }
     })();
+
     /*
     *@para options(obj)
     *@para option.container 容器的选择器
@@ -37,9 +38,7 @@
       this.preLoadNum = options.preLoadNum || 3;
       this._initial();
     }
-    /*
-    *初始化：
-    */
+    
     SlidePage.prototype._initial = function() {
 
       this.index = 0 ;
@@ -106,6 +105,7 @@
             self = this;
         
         this.isAnimating = true;
+
         /*往前翻，为了防止本页隐藏的时候出现白屏，先将上一页显示*/
         $inNode.addClass('pt-page-current');
 
@@ -125,21 +125,6 @@
         this.childrenNodes[outIndex].addClass("removeable").removeClass(animateOut);
       }
       this._lazyLoad(inIndex);
-      /*for(var i = 0, len = eleArray.length; i < len; i++){
-        var ele = eleArray.eq(i),
-            delaySecond = ele.data('delay');
-        if(!!delaySecond){
-          ele.css({
-            'transition-delay' : delaySecond+'s',
-            '-moz-transition-delay' : delaySecond+'s',
-            '-webkit-transition-delay' : delaySecond+'s',
-            '-o-transition-delay' : delaySecond+'s'
-          }); 
-        }
-      }*/
-
-      /*show node*/
-      //eleArray.removeClass("removeable");
     };
 
     SlidePage.prototype._lazyLoad = function(index){
