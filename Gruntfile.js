@@ -1,4 +1,6 @@
 module.exports = function (grunt) {
+
+
     grunt.initConfig({
         pkg : grunt.file.readJSON("package.json"),
         less: {
@@ -9,7 +11,7 @@ module.exports = function (grunt) {
             },
             main:{
                 files: [{
-                    src:"src/less/animate.less",
+                    src:"src/less/tmp.less",
                     dest:"build/css/animate.css"
                 }]
             }
@@ -57,6 +59,37 @@ module.exports = function (grunt) {
         },
     });
    
+
+    var concatAnim = function () {
+
+        var categories = grunt.file.readJSON('config.json'),
+            category, files, file, fileArry = [];
+
+        for(category in categories){
+            files = categories[category];
+            for(file in files){
+                if(files.hasOwnProperty(file) && files[file]){
+                    fileArry.push("@import 'src/"+category+"/"+file+"';");
+                }
+            }
+        }
+
+
+        var a = grunt.file.read('src/less/animate.less');
+        grunt.file.write('src/less/tmp.less',a.replace('/*import animate*/',fileArry.join('')));
+        
+        grunt.task.run('less:main');
+        grunt.task.run('clean-Animate');
+    };
+
+    var cleanAnimateTmp = function(){
+        grunt.file.delete('src/less/tmp.less');
+    };
+
+    grunt.registerTask('cancat-Animate','concat animate less',concatAnim);
+    grunt.registerTask('clean-Animate','clean animate less tmp',cleanAnimateTmp);
+
+
     /*deal with css*/
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -64,8 +97,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    /*different task*/
-    grunt.registerTask('default', ['less:main','autoprefixer','copy:main']);
-    grunt.registerTask('pro', ['less:main','autoprefixer','cssmin:main','copy:main','uglify:pro']);
+    /*different task  'less:main','autoprefixer','copy:main',*/
+    grunt.registerTask('default', ['cancat-Animate','autoprefixer','copy:main']);
+    grunt.registerTask('pro', ['cancat-Animate','autoprefixer','cssmin:main','copy:main','uglify:pro']);
     
 };
