@@ -89,4 +89,7 @@
     zoom、zoomUp、zoomRight、zoomDown、zoomLeft
 
 
+###５.选择用到的css进行打包
+为了将最后的动画css文件最小，力求需要动画的css打进来，不用的不加载，所以提供了一个config.json的文件，来进行配置，默认的情况下，所有的动画都是true，即开启，你可以根据自行需要将不需要的动画选项设置为false，然后grunt（css无压缩）or grunt:pro(css进行了压缩)
+
 注：图片来源于百度＆＆谷歌
